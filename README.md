@@ -79,6 +79,14 @@ The app supports the following TON address formats:
 4. **Testnet Bounceable**: The bounceable address format for the TON test network.
 5. **Testnet Non-bounceable**: The non-bounceable address format for the TON test network.
 
+## Contact
+
+If you have any questions, suggestions, or just want to chat about TON and blockchain technology, feel free to reach out:
+
+- Telegram: [@arveer](https://t.me/arveer)
+
+I'm always happy to discuss TON-related topics, address any issues you might encounter with the converter, or explore potential collaborations. Don't hesitate to drop me a message!
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.

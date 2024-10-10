@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Sun, Moon, Copy, Check } from 'lucide-react';
+import { Sun, Moon, Copy, Check, Send } from 'lucide-react';
 import { Address } from '@ton/core';
 import { useTheme } from '@/components/theme-provider';
 import { Button } from '@/components/ui/button';
+import { CardFooter } from '@/components/ui/card';
 
 interface AddressFormats {
   hex: string;
@@ -166,6 +167,18 @@ export const AddressConverter: React.FC = () => {
           )}
         </div>
       </div>
+
+      <CardFooter className='flex justify-center pt-6'>
+        <a
+          href='https://t.me/arveer'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center text-sm text-muted-foreground hover:text-primary transition-colors'
+        >
+          <Send className='h-4 w-4 mr-2' />
+          Contact me on Telegram
+        </a>
+      </CardFooter>
     </div>
   );
 };
