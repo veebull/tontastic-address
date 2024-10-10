@@ -31,16 +31,10 @@ const App: React.FC = () => {
       <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
         <div className='min-h-screen w-screen bg-gradient-to-b from-blue-900 to-black p-4'>
           <Routes>
-            <Route
-              path='/ton-address-converter/'
-              element={<AddressConverter />}
-            />
+            <Route path='/tontastic-address/' element={<AddressConverter />} />
 
             {/* Placeholder route for undefined paths */}
-            <Route
-              path='/ton-address-converter/*'
-              element={<PlaceholderPage />}
-            />
+            <Route path='/tontastic-address/*' element={<PlaceholderPage />} />
           </Routes>
         </div>
       </ThemeProvider>

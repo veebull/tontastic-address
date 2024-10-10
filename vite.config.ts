@@ -8,7 +8,7 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 export default defineConfig({
   plugins: [react(), nodePolyfills()],
 
-  base: '/ton-address-converter/',
+  base: '/tontastic-address/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
