@@ -1,50 +1,84 @@
-# React + TypeScript + Vite
+# TON Address Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TON Address Converter is a web application that allows users to convert TON blockchain addresses between different formats. It provides an easy-to-use interface for converting addresses and copying them to the clipboard.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Convert TON addresses to various formats:
+  - HEX
+  - Mainnet (Bounceable and Non-bounceable)
+  - Testnet (Bounceable and Non-bounceable)
+- Real-time address conversion as you type
+- Copy converted addresses to clipboard with a single click
+- Dark mode support
+- Responsive design for desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Tailwind CSS
+- @ton/core library for TON address parsing and conversion
+- Lucide React for icons
+- shadcn/ui components
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository:
+   git clone https://github.com/yourusername/ton-address-converter.git
+   Copy
+2. Navigate to the project directory:
+   cd ton-address-converter
+   Copy
+3. Install dependencies:
+   npm install
+   Copy
+4. Start the development server:
+   npm run dev
+   Copy
+5. Open your browser and visit `http://localhost:3000` to view the app.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Usage
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Enter a TON address in the input field at the top of the page.
+2. The app will automatically convert the address to different formats as you type.
+3. If the address is valid, you'll see the converted formats displayed below the input field.
+4. Click the copy button next to any converted address to copy it to your clipboard.
+5. Use the theme toggle button in the top-right corner to switch between light and dark modes.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Error Handling
+
+- If you enter an invalid address, the app will display an error message.
+- The app will also show an error if the input field is left empty.
+
+## Components
+
+### AddressConverter
+
+The main component of the application. It handles the address input, conversion, and display of results.
+
+### AddressField
+
+A reusable component for displaying each converted address format with a copy button.
+
+## Styling
+
+The app uses Tailwind CSS for styling, providing a clean and responsive design. The dark mode is implemented using Tailwind's dark mode feature.
+
+## TON Address Formats
+
+The app supports the following TON address formats:
+
+1. **HEX**: The raw hexadecimal representation of the address.
+2. **Mainnet Bounceable**: The bounceable address format for the main TON network.
+3. **Mainnet Non-bounceable**: The non-bounceable address format for the main TON network.
+4. **Testnet Bounceable**: The bounceable address format for the TON test network.
+5. **Testnet Non-bounceable**: The non-bounceable address format for the TON test network.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
