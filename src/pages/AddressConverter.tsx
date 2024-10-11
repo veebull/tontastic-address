@@ -120,18 +120,32 @@ export const AddressConverter: React.FC = () => {
             </Button>
           </div>
           <div className='mb-8'>
-            <input
-              autoComplete='off'
-              type='text'
-              value={address}
-              onChange={handleInputChange}
-              placeholder='Enter TON address'
-              className={`w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200 ${
-                theme === 'light'
-                  ? 'bg-white border-gray-300'
-                  : 'bg-gray-800 border-gray-700'
-              }`}
-            />
+            <div className='flex mb-4'>
+              <input
+                autoComplete='off'
+                type='text'
+                value={address}
+                onChange={handleInputChange}
+                placeholder='Enter TON address'
+                className={`flex-grow px-4 py-2 rounded-l-md border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200 ${
+                  theme === 'light'
+                    ? 'bg-white border-gray-300'
+                    : 'bg-gray-800 border-gray-700'
+                }`}
+              />
+              <button
+                onClick={() =>
+                  navigator.clipboard.readText().then((text) => {
+                    setAddress(text);
+                    convertAddress(text);
+                  })
+                }
+                className='px-3 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
+              >
+                Paste
+              </button>
+            </div>
+
             {error && <p className='mt-2 text-red-500 text-sm'>{error}</p>}
           </div>
           {addressFormats && (
